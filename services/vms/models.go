@@ -17,6 +17,10 @@ type ATAControllerCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SATAControllerSerializer `json:"data,omitempty"`
 	Status            *int32                    `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ATAControllerDestroyResponse ...
@@ -24,6 +28,10 @@ type ATAControllerDestroyResponse struct {
 	autorest.Response `json:"-"`
 	Data              *string `json:"data,omitempty"`
 	Status            *int32  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ATAControllerListResponse ...
@@ -31,6 +39,10 @@ type ATAControllerListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]SATAControllerSerializer `json:"data,omitempty"`
 	Status            *int32                      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ATAControllerRetrieveResponse ...
@@ -38,6 +50,10 @@ type ATAControllerRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SATAControllerSerializer `json:"data,omitempty"`
 	Status            *int32                    `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // AdapterCreateResponse ...
@@ -45,7 +61,10 @@ type AdapterCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *AdapterSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
-	Traceback         *string            `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // AdapterDestroyResponse ...
@@ -53,14 +72,20 @@ type AdapterDestroyResponse struct {
 	autorest.Response `json:"-"`
 	Data              *string `json:"data,omitempty"`
 	Status            *int32  `json:"status,omitempty"`
-	Traceback         *string `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // AdapterIpsResponse ...
 type AdapterIpsResponse struct {
 	autorest.Response `json:"-"`
-	Status            *int32  `json:"status,omitempty"`
-	Traceback         *string `json:"traceback,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // AdapterListResponse ...
@@ -68,7 +93,10 @@ type AdapterListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]AdapterSerializer `json:"data,omitempty"`
 	Status            *int32               `json:"status,omitempty"`
-	Traceback         *string              `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // AdapterPartialUpdateResponse ...
@@ -76,7 +104,10 @@ type AdapterPartialUpdateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *AdapterSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
-	Traceback         *string            `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // AdapterRetrieveResponse ...
@@ -84,7 +115,10 @@ type AdapterRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *AdapterSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
-	Traceback         *string            `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // AdapterSerializer ...
@@ -99,22 +133,31 @@ type AdapterSerializer struct {
 
 // AuthLoginResponse ...
 type AuthLoginResponse struct {
-	Data      *UserSerializer `json:"data,omitempty"`
-	Status    *int32          `json:"status,omitempty"`
-	Traceback *string         `json:"traceback,omitempty"`
+	Data   *UserSerializer `json:"data,omitempty"`
+	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // BackupCreateResponse ...
 type BackupCreateResponse struct {
-	Data      *BackupSerializer `json:"data,omitempty"`
-	Status    *int32            `json:"status,omitempty"`
-	Traceback *string           `json:"traceback,omitempty"`
+	Data   *BackupSerializer `json:"data,omitempty"`
+	Status *int32            `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // BackupDestroyResponse ...
 type BackupDestroyResponse struct {
-	Data      *string `json:"data,omitempty"`
-	Status    *int32  `json:"status,omitempty"`
+	Data   *string `json:"data,omitempty"`
+	Status *int32  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
 	Traceback *string `json:"traceback,omitempty"`
 }
 
@@ -130,23 +173,32 @@ type BackupInfoSerializer struct {
 
 // BackupListResponse ...
 type BackupListResponse struct {
-	Data      *[]BackupSerializer `json:"data,omitempty"`
-	Status    *int32              `json:"status,omitempty"`
-	Traceback *string             `json:"traceback,omitempty"`
+	Data   *[]BackupSerializer `json:"data,omitempty"`
+	Status *int32              `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // BackupPartialUpdateResponse ...
 type BackupPartialUpdateResponse struct {
-	Data      *BackupSerializer `json:"data,omitempty"`
-	Status    *int32            `json:"status,omitempty"`
-	Traceback *string           `json:"traceback,omitempty"`
+	Data   *BackupSerializer `json:"data,omitempty"`
+	Status *int32            `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // BackupRetrieveResponse ...
 type BackupRetrieveResponse struct {
-	Data      *BackupSerializer `json:"data,omitempty"`
-	Status    *int32            `json:"status,omitempty"`
-	Traceback *string           `json:"traceback,omitempty"`
+	Data   *BackupSerializer `json:"data,omitempty"`
+	Status *int32            `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // BackupScheduleSerializer ...
@@ -184,6 +236,10 @@ type BackupSerializer struct {
 type BatchPostResponse struct {
 	Data   *[]QVSResponse `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // Body ...
@@ -203,7 +259,10 @@ type CDROMCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *CDROMSerializer `json:"data,omitempty"`
 	Status            *int32           `json:"status,omitempty"`
-	Traceback         *string          `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CDROMDestroyResponse ...
@@ -211,7 +270,10 @@ type CDROMDestroyResponse struct {
 	autorest.Response `json:"-"`
 	Data              *string `json:"data,omitempty"`
 	Status            *int32  `json:"status,omitempty"`
-	Traceback         *string `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CDROMInsertVMDriverResponse ...
@@ -219,7 +281,10 @@ type CDROMInsertVMDriverResponse struct {
 	autorest.Response `json:"-"`
 	Data              *CDROMSerializer `json:"data,omitempty"`
 	Status            *int32           `json:"status,omitempty"`
-	Traceback         *string          `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CDROMListResponse ...
@@ -227,7 +292,10 @@ type CDROMListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]CDROMSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
-	Traceback         *string            `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CDROMPartialUpdateResponse ...
@@ -235,7 +303,10 @@ type CDROMPartialUpdateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *CDROMSerializer `json:"data,omitempty"`
 	Status            *int32           `json:"status,omitempty"`
-	Traceback         *string          `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CDROMRetrieveResponse ...
@@ -243,7 +314,10 @@ type CDROMRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *CDROMSerializer `json:"data,omitempty"`
 	Status            *int32           `json:"status,omitempty"`
-	Traceback         *string          `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CDROMSerializer ...
@@ -264,6 +338,10 @@ type CheckIsoResponse struct {
 	autorest.Response `json:"-"`
 	Data              *CheckIsoResponseData `json:"data,omitempty"`
 	Status            *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CheckIsoResponseData ...
@@ -276,6 +354,10 @@ type CloneResponse struct {
 	autorest.Response `json:"-"`
 	Data              *TaskSerializer `json:"data,omitempty"`
 	Status            *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ConversionSerializer ...
@@ -288,6 +370,10 @@ type ConversionSerializer struct {
 type CreateAutoInstallDeviceResponse struct {
 	autorest.Response `json:"-"`
 	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CreateResponse ...
@@ -295,6 +381,10 @@ type CreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *Serializer `json:"data,omitempty"`
 	Status            *int32      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CreationGraphicSerializer ...
@@ -319,37 +409,52 @@ type CreationInfoSerializer struct {
 
 // CredentialCreateResponse ...
 type CredentialCreateResponse struct {
-	Data      *CredentialSerializer `json:"data,omitempty"`
-	Status    *int32                `json:"status,omitempty"`
-	Traceback *string               `json:"traceback,omitempty"`
+	Data   *CredentialSerializer `json:"data,omitempty"`
+	Status *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CredentialDestroyResponse ...
 type CredentialDestroyResponse struct {
-	Data      *string `json:"data,omitempty"`
-	Status    *int32  `json:"status,omitempty"`
+	Data   *string `json:"data,omitempty"`
+	Status *int32  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
 	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CredentialListResponse ...
 type CredentialListResponse struct {
-	Data      *[]CredentialSerializer `json:"data,omitempty"`
-	Status    *int32                  `json:"status,omitempty"`
-	Traceback *string                 `json:"traceback,omitempty"`
+	Data   *[]CredentialSerializer `json:"data,omitempty"`
+	Status *int32                  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CredentialPartialUpdateResponse ...
 type CredentialPartialUpdateResponse struct {
-	Data      *CredentialSerializer `json:"data,omitempty"`
-	Status    *int32                `json:"status,omitempty"`
-	Traceback *string               `json:"traceback,omitempty"`
+	Data   *CredentialSerializer `json:"data,omitempty"`
+	Status *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CredentialRetrieveResponse ...
 type CredentialRetrieveResponse struct {
-	Data      *CredentialSerializer `json:"data,omitempty"`
-	Status    *int32                `json:"status,omitempty"`
-	Traceback *string               `json:"traceback,omitempty"`
+	Data   *CredentialSerializer `json:"data,omitempty"`
+	Status *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CredentialSerializer ...
@@ -366,21 +471,21 @@ type CredentialSerializer struct {
 
 // CredentialTestConneticonResponse ...
 type CredentialTestConneticonResponse struct {
-	Data      *[]interface{} `json:"data,omitempty"`
-	Status    *int32         `json:"status,omitempty"`
-	Traceback *string        `json:"traceback,omitempty"`
+	Data   *[]interface{} `json:"data,omitempty"`
+	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // CredentialTestResponse ...
 type CredentialTestResponse struct {
-	Data      *[]interface{} `json:"data,omitempty"`
-	Status    *int32         `json:"status,omitempty"`
-	Traceback *string        `json:"traceback,omitempty"`
-}
-
-// DELETEUserVMPermissionResponse ...
-type DELETEUserVMPermissionResponse struct {
-	Status    *int32  `json:"status,omitempty"`
+	Data   *[]interface{} `json:"data,omitempty"`
+	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
 	Traceback *string `json:"traceback,omitempty"`
 }
 
@@ -390,10 +495,23 @@ type Data struct {
 	Overcommited *bool `json:"overcommited,omitempty"`
 }
 
+// DeleteUserVMPermissionResponse ...
+type DeleteUserVMPermissionResponse struct {
+	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
+}
+
 // DeprecatedTasksGetResponse ...
 type DeprecatedTasksGetResponse struct {
 	Data   *[]interface{} `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // DestroyResponse ...
@@ -401,6 +519,10 @@ type DestroyResponse struct {
 	autorest.Response `json:"-"`
 	Data              *string `json:"data,omitempty"`
 	Status            *int32  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // DiskCreateResponse ...
@@ -408,15 +530,20 @@ type DiskCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *DiskSerializer `json:"data,omitempty"`
 	Status            *int32          `json:"status,omitempty"`
-	Traceback         *string         `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // DiskDestroyResponse ...
 type DiskDestroyResponse struct {
 	autorest.Response `json:"-"`
-	Data              *string `json:"data,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
-	Traceback         *string `json:"traceback,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // DiskListResponse ...
@@ -424,7 +551,10 @@ type DiskListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]DiskSerializer `json:"data,omitempty"`
 	Status            *int32            `json:"status,omitempty"`
-	Traceback         *string           `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // DiskPartialUpdateResponse ...
@@ -432,7 +562,10 @@ type DiskPartialUpdateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *DiskSerializer `json:"data,omitempty"`
 	Status            *int32          `json:"status,omitempty"`
-	Traceback         *string         `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // DiskRetrieveResponse ...
@@ -440,7 +573,10 @@ type DiskRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *DiskSerializer `json:"data,omitempty"`
 	Status            *int32          `json:"status,omitempty"`
-	Traceback         *string         `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // DiskSerializer ...
@@ -475,26 +611,30 @@ type ExportResponse struct {
 	autorest.Response `json:"-"`
 	Data              *TaskSerializer `json:"data,omitempty"`
 	Status            *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ForceshutdownResponse ...
 type ForceshutdownResponse struct {
 	autorest.Response `json:"-"`
 	Status            *int32 `json:"status,omitempty"`
-}
-
-// GETUserVMPermissionResponse ...
-type GETUserVMPermissionResponse struct {
-	Data      *PermissionSerializer `json:"data,omitempty"`
-	Status    *int32                `json:"status,omitempty"`
-	Traceback *string               `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GPUDestroyResponse ...
 type GPUDestroyResponse struct {
 	autorest.Response `json:"-"`
-	Data              *string `json:"data,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GenerateMacResponse ...
@@ -503,30 +643,60 @@ type GenerateMacResponse struct {
 	// Data - An array of MAC strings 00:00:00:00:00:00
 	Data   *[]string `json:"data,omitempty"`
 	Status *int32    `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GetBackupInfoPostResponse ...
 type GetBackupInfoPostResponse struct {
 	Data   *[]interface{} `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GetExternalPortsGetResponse ...
 type GetExternalPortsGetResponse struct {
 	Data   *[]interface{} `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GetInternalPortsGetResponse ...
 type GetInternalPortsGetResponse struct {
 	Data   *[]interface{} `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GetStatusGetResponse ...
 type GetStatusGetResponse struct {
 	Data   *[]interface{} `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
+}
+
+// GetUserVMPermissionResponse ...
+type GetUserVMPermissionResponse struct {
+	Data   *PermissionSerializer `json:"data,omitempty"`
+	Status *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GpuResponse ...
@@ -534,6 +704,10 @@ type GpuResponse struct {
 	autorest.Response `json:"-"`
 	Data              *PCISerializer `json:"data,omitempty"`
 	Status            *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GraphicCreateResponse ...
@@ -541,7 +715,10 @@ type GraphicCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *GraphicSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
-	Traceback         *string            `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GraphicDestroyResponse ...
@@ -549,15 +726,21 @@ type GraphicDestroyResponse struct {
 	autorest.Response `json:"-"`
 	Data              *string `json:"data,omitempty"`
 	Status            *int32  `json:"status,omitempty"`
-	Traceback         *string `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GraphicListResponse ...
 type GraphicListResponse struct {
 	autorest.Response `json:"-"`
-	Data              *[]GraphicSerializer `json:"data,omitempty"`
-	Status            *int32               `json:"status,omitempty"`
-	Traceback         *string              `json:"traceback,omitempty"`
+	Data              *GraphicSerializer `json:"data,omitempty"`
+	Status            *int32             `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GraphicPartialUpdateResponse ...
@@ -565,7 +748,10 @@ type GraphicPartialUpdateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *GraphicSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
-	Traceback         *string            `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GraphicRetrieveResponse ...
@@ -573,7 +759,10 @@ type GraphicRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *GraphicSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
-	Traceback         *string            `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // GraphicSerializer ...
@@ -589,9 +778,12 @@ type GraphicSerializer struct {
 
 // IPListResponse ...
 type IPListResponse struct {
-	Data      *[]IPSerializer `json:"data,omitempty"`
-	Status    *int32          `json:"status,omitempty"`
-	Traceback *string         `json:"traceback,omitempty"`
+	Data   *[]IPSerializer `json:"data,omitempty"`
+	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // IPSerializer ...
@@ -612,9 +804,12 @@ type ISOEdition struct {
 
 // ImageConvertResponse ...
 type ImageConvertResponse struct {
-	Data      *ConversionSerializer `json:"data,omitempty"`
-	Status    *int32                `json:"status,omitempty"`
-	Traceback *string               `json:"traceback,omitempty"`
+	Data   *ConversionSerializer `json:"data,omitempty"`
+	Status *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // Import ...
@@ -637,13 +832,19 @@ type ImportCheckResponse struct {
 	autorest.Response `json:"-"`
 	Data              *ConversionSerializer `json:"data,omitempty"`
 	Status            *int32                `json:"status,omitempty"`
-	Traceback         *string               `json:"traceback,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ImportCheckResponseType ...
 type ImportCheckResponseType struct {
-	Message *string `json:"message,omitempty"`
-	Status  *int32  `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ImportConfigRequest ...
@@ -658,41 +859,80 @@ type ImportConfigRequest struct {
 // ImportConfigResponse ...
 type ImportConfigResponse struct {
 	autorest.Response `json:"-"`
-	Message           *string `json:"message,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ImportDownloadResponse ...
 type ImportDownloadResponse struct {
 	autorest.Response `json:"-"`
-	Message           *string `json:"message,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ImportDownloadResumeResponse ...
 type ImportDownloadResumeResponse struct {
 	autorest.Response `json:"-"`
-	Message           *string `json:"message,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ImportVMResponse ...
 type ImportVMResponse struct {
 	autorest.Response `json:"-"`
-	Message           *string `json:"message,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // IpsResponse ...
 type IpsResponse struct {
 	autorest.Response `json:"-"`
-	Status            *int32 `json:"status,omitempty"`
+	Data              map[string][]string `json:"data"`
+	Status            *int32              `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
+}
+
+// MarshalJSON is the custom marshaler for IpsResponse.
+func (ir IpsResponse) MarshalJSON() ([]byte, error) {
+	objectMap := make(map[string]interface{})
+	if ir.Data != nil {
+		objectMap["data"] = ir.Data
+	}
+	if ir.Status != nil {
+		objectMap["status"] = ir.Status
+	}
+	if ir.Detail != nil {
+		objectMap["detail"] = ir.Detail
+	}
+	if ir.Traceback != nil {
+		objectMap["traceback"] = ir.Traceback
+	}
+	return json.Marshal(objectMap)
 }
 
 // ListBackupsPostResponse ...
 type ListBackupsPostResponse struct {
 	Data   *[]interface{} `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ListResponse ...
@@ -700,52 +940,77 @@ type ListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]Serializer `json:"data,omitempty"`
 	Status            *int32        `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogDeleteAllResponse ...
 type LogDeleteAllResponse struct {
-	Status    *int32  `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
 	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogDeleteDownloadVMResponse ...
 type LogDeleteDownloadVMResponse struct {
-	Status    *int32  `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
 	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogDownloadExportFileResponse ...
 type LogDownloadExportFileResponse struct {
-	Status    *int32  `json:"status,omitempty"`
+	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
 	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogDownloadVMInfoResponse ...
 type LogDownloadVMInfoResponse struct {
-	Data      *[]DownloadVMLogSerializer `json:"data,omitempty"`
-	Status    *int32                     `json:"status,omitempty"`
-	Traceback *string                    `json:"traceback,omitempty"`
+	Data   *[]DownloadVMLogSerializer `json:"data,omitempty"`
+	Status *int32                     `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogListResponse ...
 type LogListResponse struct {
-	Data      *[]LogSerializer `json:"data,omitempty"`
-	Status    *int32           `json:"status,omitempty"`
-	Traceback *string          `json:"traceback,omitempty"`
+	Data   *[]LogSerializer `json:"data,omitempty"`
+	Status *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogListUserCurrentLogsResponse ...
 type LogListUserCurrentLogsResponse struct {
-	Data      *[]LogSerializer `json:"data,omitempty"`
-	Status    *int32           `json:"status,omitempty"`
-	Traceback *string          `json:"traceback,omitempty"`
+	Data   *[]LogSerializer `json:"data,omitempty"`
+	Status *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogSaveResponse ...
 type LogSaveResponse struct {
-	Data      *[]LogSerializer `json:"data,omitempty"`
-	Status    *int32           `json:"status,omitempty"`
-	Traceback *string          `json:"traceback,omitempty"`
+	Data   *[]LogSerializer `json:"data,omitempty"`
+	Status *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // LogSerializer ...
@@ -765,9 +1030,12 @@ type LogSerializer struct {
 
 // MassStorageControllerListResponse ...
 type MassStorageControllerListResponse struct {
-	Data      *[]MassStorageControllerSerializer `json:"data,omitempty"`
-	Status    *int32                             `json:"status,omitempty"`
-	Traceback *string                            `json:"traceback,omitempty"`
+	Data   *[]MassStorageControllerSerializer `json:"data,omitempty"`
+	Status *int32                             `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // MassStorageControllerSerializer ...
@@ -788,37 +1056,42 @@ type MassStorageControllerSerializer struct {
 
 // NewsAddNewsStatusResponse ...
 type NewsAddNewsStatusResponse struct {
-	Data      *[]interface{} `json:"data,omitempty"`
-	Status    *int32         `json:"status,omitempty"`
-	Traceback *string        `json:"traceback,omitempty"`
+	Data   *[]interface{} `json:"data,omitempty"`
+	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // NewsDeleteNewsStatusResponse ...
 type NewsDeleteNewsStatusResponse struct {
-	Data      *[]interface{} `json:"data,omitempty"`
-	Status    *int32         `json:"status,omitempty"`
-	Traceback *string        `json:"traceback,omitempty"`
+	Data   *[]interface{} `json:"data,omitempty"`
+	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // NewsGetNewsStatusResponse ...
 type NewsGetNewsStatusResponse struct {
-	Data      *[][]interface{} `json:"data,omitempty"`
-	Status    *int32           `json:"status,omitempty"`
-	Traceback *string          `json:"traceback,omitempty"`
+	Data   *[][]interface{} `json:"data,omitempty"`
+	Status *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // NewsListResponse ...
 type NewsListResponse struct {
-	Data      *[][]interface{} `json:"data,omitempty"`
-	Status    *int32           `json:"status,omitempty"`
-	Traceback *string          `json:"traceback,omitempty"`
-}
-
-// PATCHUserVMPermissionResponse ...
-type PATCHUserVMPermissionResponse struct {
-	Data      *PermissionSerializer `json:"data,omitempty"`
-	Status    *int32                `json:"status,omitempty"`
-	Traceback *string               `json:"traceback,omitempty"`
+	Data   *[][]interface{} `json:"data,omitempty"`
+	Status *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PCIGroupCreateResponse ...
@@ -826,13 +1099,20 @@ type PCIGroupCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *PCIGroupSerializer `json:"data,omitempty"`
 	Status            *int32              `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PCIGroupDestroyResponse ...
 type PCIGroupDestroyResponse struct {
 	autorest.Response `json:"-"`
-	Data              *int32 `json:"data,omitempty"`
 	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PCIGroupSerializer ...
@@ -849,6 +1129,10 @@ type PCIListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]PCISerializer `json:"data,omitempty"`
 	Status            *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PCIRetrieveResponse ...
@@ -856,6 +1140,10 @@ type PCIRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *PCISerializer `json:"data,omitempty"`
 	Status            *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PCISerializer ...
@@ -873,24 +1161,35 @@ type PCISerializer struct {
 	VMID             *string `json:"vm_id,omitempty"`
 }
 
-// POSTUserVMPermissionResponse ...
-type POSTUserVMPermissionResponse struct {
-	Data      *PermissionSerializer `json:"data,omitempty"`
-	Status    *int32                `json:"status,omitempty"`
-	Traceback *string               `json:"traceback,omitempty"`
-}
-
 // PartialUpdateResponse ...
 type PartialUpdateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *Serializer `json:"data,omitempty"`
 	Status            *int32      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
+}
+
+// PatchUserVMPermissionResponse ...
+type PatchUserVMPermissionResponse struct {
+	Data   *PermissionSerializer `json:"data,omitempty"`
+	Status *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PermissionListResponse ...
 type PermissionListResponse struct {
 	Data   *[]PermissionSerializer `json:"data,omitempty"`
 	Status *int32                  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PermissionSerializer ...
@@ -903,16 +1202,22 @@ type PermissionSerializer struct {
 
 // PortCreateResponse ...
 type PortCreateResponse struct {
-	Data      *PortSerializer `json:"data,omitempty"`
-	Status    *int32          `json:"status,omitempty"`
-	Traceback *string         `json:"traceback,omitempty"`
+	Data   *PortSerializer `json:"data,omitempty"`
+	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PortListResponse ...
 type PortListResponse struct {
-	Data      *[]PortSerializer `json:"data,omitempty"`
-	Status    *int32            `json:"status,omitempty"`
-	Traceback *string           `json:"traceback,omitempty"`
+	Data   *[]PortSerializer `json:"data,omitempty"`
+	Status *int32            `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // PortSerializer ...
@@ -921,11 +1226,22 @@ type PortSerializer struct {
 	HTTPS *int32 `json:"https,omitempty"`
 }
 
+// PostUserVMPermissionResponse ...
+type PostUserVMPermissionResponse struct {
+	Data   *PermissionSerializer `json:"data,omitempty"`
+	Status *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
+}
+
 // QVSResponse ...
 type QVSResponse struct {
-	Status *int32      `json:"status,omitempty"`
-	Data   interface{} `json:"data,omitempty"`
-	// Traceback - Contains the eception stack trace, if running in DEBUG mode
+	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
 	Traceback *string `json:"traceback,omitempty"`
 }
 
@@ -957,30 +1273,50 @@ type RequirementsSerializer struct {
 type ReservedMemoryCreateResponse struct {
 	Data   *[]interface{} `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ReservedMemoryListResponse ...
 type ReservedMemoryListResponse struct {
 	Data   *string `json:"data,omitempty"`
 	Status *int32  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ResetResponse ...
 type ResetResponse struct {
 	autorest.Response `json:"-"`
 	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // RestorePostResponse ...
 type RestorePostResponse struct {
 	Data   *[]BackupInfoSerializer `json:"data,omitempty"`
 	Status *int32                  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ResumeResponse ...
 type ResumeResponse struct {
 	autorest.Response `json:"-"`
 	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // RetrieveResponse ...
@@ -988,12 +1324,20 @@ type RetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *Serializer `json:"data,omitempty"`
 	Status            *int32      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SATAControllerListResponse ...
 type SATAControllerListResponse struct {
 	Data   *[]SATAControllerSerializer `json:"data,omitempty"`
 	Status *int32                      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SATAControllerSerializer ...
@@ -1016,6 +1360,10 @@ type SATAControllerSerializer struct {
 type SchedulePartialUpdateResponse struct {
 	Data   *ScheduleSerializer `json:"data,omitempty"`
 	Status *int32              `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ScheduleSerializer ...
@@ -1035,18 +1383,30 @@ type ScheduleSerializer struct {
 type ScheduleSnapshotCreateResponse struct {
 	Data   *ScheduleSnapshotSerializer `json:"data,omitempty"`
 	Status *int32                      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ScheduleSnapshotPartialUpdateResponse ...
 type ScheduleSnapshotPartialUpdateResponse struct {
 	Data   *ScheduleSnapshotSerializer `json:"data,omitempty"`
 	Status *int32                      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ScheduleSnapshotRetrieveResponse ...
 type ScheduleSnapshotRetrieveResponse struct {
 	Data   *Serializer `json:"data,omitempty"`
 	Status *int32      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ScheduleSnapshotSerializer ...
@@ -1066,6 +1426,10 @@ type SerialPortCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SerialPortSerializerType `json:"data,omitempty"`
 	Status            *int32                    `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SerialPortDestroyResponse ...
@@ -1073,12 +1437,20 @@ type SerialPortDestroyResponse struct {
 	autorest.Response `json:"-"`
 	Data              *string `json:"data,omitempty"`
 	Status            *int32  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SerialPortListResponse ...
 type SerialPortListResponse struct {
 	Data   *[]SerialPortSerializer `json:"data,omitempty"`
 	Status *int32                  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SerialPortListResponseType ...
@@ -1086,6 +1458,10 @@ type SerialPortListResponseType struct {
 	autorest.Response `json:"-"`
 	Data              *[]SerialPortSerializer `json:"data,omitempty"`
 	Status            *int32                  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SerialPortRetrieveResponse ...
@@ -1093,6 +1469,10 @@ type SerialPortRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SerialPortSerializer `json:"data,omitempty"`
 	Status            *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SerialPortSerializer ...
@@ -1172,13 +1552,20 @@ type ShareLinkCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SharelinkSerializer `json:"data,omitempty"`
 	Status            *int32               `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ShareLinkDestroyResponse ...
 type ShareLinkDestroyResponse struct {
 	autorest.Response `json:"-"`
-	Data              *string `json:"data,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ShareLinkListResponse ...
@@ -1186,12 +1573,20 @@ type ShareLinkListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]SharelinkSerializer `json:"data,omitempty"`
 	Status            *int32                 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ShareLinkListResponseType ...
 type ShareLinkListResponseType struct {
 	Data   *[][]interface{} `json:"data,omitempty"`
 	Status *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ShareLinkPartialUpdateResponse ...
@@ -1199,6 +1594,10 @@ type ShareLinkPartialUpdateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SharelinkSerializer `json:"data,omitempty"`
 	Status            *int32               `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // ShareLinkRetrieveResponse ...
@@ -1206,6 +1605,10 @@ type ShareLinkRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SharelinkSerializer `json:"data,omitempty"`
 	Status            *int32               `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SharelinkSerializer ...
@@ -1229,6 +1632,10 @@ type SharelinkSerializer struct {
 type ShutdownResponse struct {
 	autorest.Response `json:"-"`
 	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SnapshotCreateResponse ...
@@ -1236,13 +1643,20 @@ type SnapshotCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SnapshotSerializer `json:"data,omitempty"`
 	Status            *int32              `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SnapshotDestroyResponse ...
 type SnapshotDestroyResponse struct {
 	autorest.Response `json:"-"`
-	Data              *string `json:"data,omitempty"`
-	Status            *int32  `json:"status,omitempty"`
+	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SnapshotListResponse ...
@@ -1250,6 +1664,10 @@ type SnapshotListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]SnapshotSerializer `json:"data,omitempty"`
 	Status            *int32                `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SnapshotRetrieveResponse ...
@@ -1257,6 +1675,10 @@ type SnapshotRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *SnapshotSerializer `json:"data,omitempty"`
 	Status            *int32              `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SnapshotSerializer ...
@@ -1276,6 +1698,10 @@ type SnapshotSerializer struct {
 type StartResponse struct {
 	autorest.Response `json:"-"`
 	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // StateSerializer ...
@@ -1291,6 +1717,10 @@ type StatesResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]StateSerializer `json:"data,omitempty"`
 	Status            *int32             `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // StoppingProgressResponse ...
@@ -1298,6 +1728,10 @@ type StoppingProgressResponse struct {
 	autorest.Response `json:"-"`
 	Data              *StoppingProgressResponseData `json:"data,omitempty"`
 	Status            *int32                        `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // StoppingProgressResponseData ...
@@ -1317,6 +1751,10 @@ type StoppingProgressResponseDataVmsItem struct {
 type SuspendResponse struct {
 	autorest.Response `json:"-"`
 	Status            *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // SyncResponse ...
@@ -1324,11 +1762,19 @@ type SyncResponse struct {
 	autorest.Response `json:"-"`
 	Data              *Serializer `json:"data,omitempty"`
 	Status            *int32      `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // TaskDestroyResponse ...
 type TaskDestroyResponse struct {
 	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // TaskSerializer ...
@@ -1387,6 +1833,10 @@ type USBCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *USBSerializer `json:"data,omitempty"`
 	Status            *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // USBDestroyResponse ...
@@ -1394,6 +1844,10 @@ type USBDestroyResponse struct {
 	autorest.Response `json:"-"`
 	Data              *string `json:"data,omitempty"`
 	Status            *int32  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // USBListResponse ...
@@ -1401,6 +1855,10 @@ type USBListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *[]USBSerializer `json:"data,omitempty"`
 	Status            *int32           `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // USBPartialUpdateResponse ...
@@ -1408,6 +1866,10 @@ type USBPartialUpdateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *USBSerializer `json:"data,omitempty"`
 	Status            *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // USBRetrieveResponse ...
@@ -1415,6 +1877,10 @@ type USBRetrieveResponse struct {
 	autorest.Response `json:"-"`
 	Data              *USBSerializer `json:"data,omitempty"`
 	Status            *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // USBSerializer ...
@@ -1437,35 +1903,59 @@ type USBSerializer struct {
 type UserCreateResponse struct {
 	Data   *UserSerializer `json:"data,omitempty"`
 	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // UserDestroyResponse ...
 type UserDestroyResponse struct {
 	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // UserGetCurrentUserInfoResponse ...
 type UserGetCurrentUserInfoResponse struct {
 	Data   *UserSerializer `json:"data,omitempty"`
 	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // UserListResponse ...
 type UserListResponse struct {
 	Data   *[]UserSerializer `json:"data,omitempty"`
 	Status *int32            `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // UserPartialUpdateResponse ...
 type UserPartialUpdateResponse struct {
 	Data   *UserSerializer `json:"data,omitempty"`
 	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // UserRetrieveResponse ...
 type UserRetrieveResponse struct {
 	Data   *UserSerializer `json:"data,omitempty"`
 	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // UserSerializer ...
@@ -1481,6 +1971,10 @@ type UserSerializer struct {
 // UserUpdateClearLogTimeResponse ...
 type UserUpdateClearLogTimeResponse struct {
 	Status *int32 `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VASerializer ...
@@ -1507,6 +2001,10 @@ type VNCTokenCreateResponse struct {
 	autorest.Response `json:"-"`
 	Data              *TaskSerializer `json:"data,omitempty"`
 	Status            *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VNCTokenListResponse ...
@@ -1514,36 +2012,60 @@ type VNCTokenListResponse struct {
 	autorest.Response `json:"-"`
 	Data              *TaskSerializer `json:"data,omitempty"`
 	Status            *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VirtualApplianceCreateResponse ...
 type VirtualApplianceCreateResponse struct {
 	Data   *CreationInfoSerializer `json:"data,omitempty"`
 	Status *int32                  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VirtualApplianceListResponse ...
 type VirtualApplianceListResponse struct {
 	Data   *[]VASerializer `json:"data,omitempty"`
 	Status *int32          `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VirtualApplianceReloadResponse ...
 type VirtualApplianceReloadResponse struct {
 	Data   *[]QVSResponse `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VirtualApplianceRepositoryResponse ...
 type VirtualApplianceRepositoryResponse struct {
 	Data   *[]QVSResponse `json:"data,omitempty"`
 	Status *int32         `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VirtualApplianceRetrieveResponse ...
 type VirtualApplianceRetrieveResponse struct {
 	Data   *VASerializer `json:"data,omitempty"`
 	Status *int32        `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VirtualQTSAdapterSerializer ...
@@ -1560,6 +2082,10 @@ type VirtualQTSAdapterSerializer struct {
 type VirtualQTSCreateResponse struct {
 	Data   *VirtualQTSVMSerializer `json:"data,omitempty"`
 	Status *int32                  `json:"status,omitempty"`
+	// Detail - Contains details if an error occured
+	Detail *string `json:"detail,omitempty"`
+	// Traceback - Contains the exception stack trace, if running in DEBUG mode
+	Traceback *string `json:"traceback,omitempty"`
 }
 
 // VirtualQTSDiskSerializer ...
